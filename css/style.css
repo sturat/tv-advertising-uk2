@@ -1,0 +1,236 @@
+/*here we use a Goofle font. We must use web safe fonts on our web page in order for things to display 
+correctly. Install your Google fonts at the top of page*/
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
+
+body {
+	/*here we use source sans pro from Google fonts inside a font stack. A font stack is just a list of
+	fonts including some fallbacks. If source sans pro is unavailable, any sans-serif font will be used*/
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 16px;
+	/*line-height sets spacing between lines of text. It is calculated by the font size*/
+	line-height: 1.5;
+	/*The color property changes text colour and is spelt the US way. We can use hexcodes to define colour*/
+	color: #A0CD78;
+	/*to access imges folder, we do some folder navigation. '..' goes up a level, '/' goes down and selects*/
+	background-image: url(../images/uk-bg.jpg);
+	/*first we centre our background image on our screen*/
+	background-position: center;
+	/*turn off image tiling*/
+	background-repeat: no-repeat;
+	/*to make the background image fill the screen*/
+	background-size: cover;
+	/*to keep image where it is when you scroll*/
+	background-attachment: fixed;
+}
+
+header {
+	/*shorthand way of adding background properties*/
+	background: url(../images/uk-tv-advertising-header.jpg) center no-repeat;
+	/*Again we use background-size to show the whole image no matter the screen size*/
+	background-size: cover;
+	/*padding allows us to push content away from the edges. 
+	it has four values measured in pixels or percentages; top, right, bottom, left*/
+	padding: 90px 0 90px 0;
+	/*align text and images centrally*/
+	text-align: center;
+}
+
+h1 {
+	font-size: 48px;
+	/*to change text to bold or light*/
+	font-weight: 700;
+	color: #ffffff;
+	/*text shadow allows us to add shadows to our text to make them more readable*/
+	/*there are several values you can use: horizontal shadow, vertical shadow, blur radius, colour*/
+	/*use rgba colours when wanting transparency*/
+	text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/*sometimes we only want to apply rules to specific areas. One easy to do this is selector specificity.
+Here we use header p to only select the paragraph text inside our header*/
+header p{
+	color: #ffffff;
+	font-size: 24px;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/*Generally nav tag is used for background colour behind nav links*/
+nav{
+	background-color: #A0CD78;	text-align: center;	
+	margin-bottom: 50px;	
+}
+
+/*use nav a to style up text in our anchor tags*/
+nav a{
+	color: #ffffff;
+	/*to turn off underlines from our text*/
+	text-decoration: none;
+	padding: 25px 25px 25px 25px;
+	/*IN-LINE VS BLOCK*/
+	/*In our page our elements either naturally stack on top of one another
+	 or site next to one another.*/
+	 /*block level elements such as section, header, blockquote, footer etc 
+	 all allow us to set heights & stack on top of eachother*/
+	 /*inline elements sit next to eachother on one line and don't allow us to set height*/
+	 /*we want our inline elements to have a set height, so we need to change natural state*/
+	 /*inline-block means anchor tags stay inline, but also take notice of padding*/
+	 display: inline-block;
+}
+
+/*to add hover effects to anchor tags*/
+/*no spaces between a and :. To access any element states, we use : and 
+the name of the state. Links have hover, visited, active states.*/
+nav a:hover {
+	background-color: #8BC159
+}
+
+section {
+	/*to set a width to our section we use max-width*/
+	/*max-width is useful as it allows content to be as big as the maximum, but also smaller*/
+	max-width: 720px;
+	/*to move block elements into the middle*/
+	/*here we set the margin on left and right to auto. Automatically resizes margins to fit screen*/
+	margin: 0 auto;
+	background-color: #fcfcfc;
+	padding: 30px 30px 30px 30px;
+}
+
+h2{
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+p{
+	margin-bottom: 20px;
+}
+
+section img{
+	margin-bottom: 20px;
+}
+
+blockquote{
+	background-color: #A0CD78
+;
+	color: #ffffff;
+	font-size: 18px;
+	max-width: 720px;
+	margin: 30px auto;
+	padding: 40px 80px 40px 80px;
+}
+
+h3{
+		font-size: 24px;
+		color: #8BC159;
+	}
+
+footer{
+	text-align: center;
+	color: #ffffff;
+	/*if you want the padding/margin the same on all sides, you can write it once*/
+	padding: 50px 30px;	
+}
+
+/*to select a class inside of our css, we use the '.' syntax, followed by the class name*/
+.intro {
+	text-align: center;
+}
+
+.contact {
+	text-align: center;
+}
+
+/*responsive design starts here*/
+/*media quieries allow us to apply styles to certain mediums at certain widths. You can provide 
+as many media quieries as you want.*/
+/*'screen' targets colour screens. We only want these rules to be applied to screens of 720px or less.*/
+@media screen and (max-width: 720px) {
+	
+	h1{
+		/*reduce h1 font size*/
+		font-size: 32px;
+	}
+
+	header p{
+		font-size: 18px;
+	}
+
+	nav {
+		/*reduce margin bottom down to 10px*/
+		margin-bottom: 10px;
+	}
+
+	nav a {
+		/*to make anchor tags stack on top of one another, change 'inline-block' to 'block'.*/
+		display: block;
+		/*reduce padding around anchor tags*/
+		padding: 10px 35px 10px 25px;
+	}
+
+	section {
+		/*to get background showing around sections again, we change margin from auto on each 
+		side to 10px*/
+		margin: 0 10px 0 10px;
+	}
+
+	blockquote {
+		/*reduce top and bottom margin to 10px*/
+		margin: 10px 0 10px 0;
+		/*reduce left and right padding from 80px to 80px*/
+		padding: 40px;
+	}
+
+	iframe {
+		max-width: 100%;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
